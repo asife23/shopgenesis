@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Shop</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Our Shop</h1>
+            <nav>
+                <a href="/admin.html">Admin Panel</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="products">
+                <h2>Products</h2>
+                <div id="product-list">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </section>
+
+            <section id="cart">
+                <h2>Your Cart</h2>
+                <ul id="cart-items">
+                    <!-- Cart items will be loaded here -->
+                </ul>
+                <p id="cart-total">Total: $0.00</p>
+            </section>
+
+            <section id="checkout">
+                <h2>Checkout</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Shipping Address</label>
+                        <input type="text" id="address" required>
+                    </div>
+                    <button type="submit">Place Order</button>
+                </form>
+            </section>
+            
+            <section id="payment-methods" style="display: none;">
+                <h3>Choose Payment Method (Demo)</h3>
+                <button class="bkash">Pay with bKash</button>
+                <button class="nagad">Pay with Nagad</button>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
