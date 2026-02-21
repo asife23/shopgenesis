@@ -1,4 +1,3 @@
-
 // Add Product to Firestore
 function addProduct() {
   const name = document.getElementById("productName").value;
@@ -13,16 +12,19 @@ function addProduct() {
   db.collection("products").add({
     name: name,
     price: price,
-    image: image
+    image: image,
+    createdAt: new Date()
   }).then(() => {
     alert("Product Added!");
     location.reload();
+  }).catch(error => {
+    console.error("Error adding product:", error);
   });
 }
 
 // Load Products
 function loadProducts() {
-  const container = document.getElementById("productList");
+  const container = document.getElementById("product-list");
   if (!container) return;
 
   db.collection("products").onSnapshot(snapshot => {
