@@ -6,58 +6,46 @@
     <title>Admin Panel</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-<script src="firebase.js"></script>
-<script src="script.js"></script>
+
 <body>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-<script src="firebase.js"></script>
-<script src="script.js"></script>
     <div class="container">
         <header>
             <h1>Admin Panel</h1>
             <nav>
-                <a href="/">Go to Shop</a>
+                <a href="index.html">Go to Shop</a>
             </nav>
         </header>
 
         <main>
-            <section id="add-product">
+            <section>
                 <h2>Add New Product</h2>
-                <form id="add-product-form">
-                    <div class="form-group">
-                        <label for="product-title">Product Title</label>
-                        <input type="text" id="product-title" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="product-price">Price</label>
-                        <input type="number" id="product-price" step="0.01" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="product-image">Image URL</label>
-                        <input type="url" id="product-image" required>
-                    </div>
-                    <button type="submit">Add Product</button>
-                </form>
+
+                <input type="text" id="productName" placeholder="Product Title">
+                <input type="number" id="productPrice" placeholder="Price">
+                <input type="text" id="productImage" placeholder="Image URL">
+
+                <button onclick="addProduct()">Add Product</button>
             </section>
 
-            <section id="manage-products">
+            <section>
                 <h2>Manage Products</h2>
-                <div id="admin-product-list">
-                    <!-- Products for admin will be loaded here -->
-                </div>
+                <div id="admin-product-list"></div>
             </section>
 
-            <section id="view-orders">
+            <section>
                 <h2>All Orders</h2>
-                <div id="admin-order-list">
-                    <!-- Orders will be loaded here -->
-                </div>
+                <div id="admin-order-list"></div>
             </section>
         </main>
     </div>
-    <script type="module" src="script.js"></script>
+
+    <!-- Firebase v8 CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <!-- Your JS Files -->
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
