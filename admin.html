@@ -2,41 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <h1>Admin Panel</h1>
-            <nav>
-                <a href="index.html">Go to Shop</a>
-            </nav>
-        </header>
+        <h1>Admin Panel</h1>
+        <a href="index.html">← Go to Shop</a>
 
-        <main>
-            <section>
-                <h2>Add New Product</h2>
+        <h2>Add New Product</h2>
 
-                <input type="text" id="productName" placeholder="Product Title">
-                <input type="number" id="productPrice" placeholder="Price">
-                <input type="text" id="productImage" placeholder="Image URL">
+        <form id="add-product-form">
+            <input type="text" id="productName" placeholder="Product Title" required>
+            <input type="number" id="productPrice" placeholder="Price" required>
+            <input type="text" id="productImage" placeholder="Image URL" required>
 
-                <button onclick="addProduct()">Add Product</button>
-            </section>
+            <button type="submit">Add Product</button>
+        </form>
 
-            <section>
-                <h2>Manage Products</h2>
-                <div id="admin-product-list"></div>
-            </section>
+        <p id="success-message" style="color: green;"></p>
 
-            <section>
-                <h2>All Orders</h2>
-                <div id="admin-order-list"></div>
-            </section>
-        </main>
+        <h2>Manage Products</h2>
+        <div id="admin-product-list"></div>
     </div>
 
     <!-- Firebase v8 CDN -->
