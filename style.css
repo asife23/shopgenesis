@@ -1,4 +1,20 @@
-/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}/* ===== RESET ===== */
 *{
   margin:0;
   padding:0;
