@@ -72,3 +72,20 @@ footer {
   background: #111;
   color: white;
 }
+* {
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+}
+
+@media(max-width:768px){
+  .hero h2{
+    font-size:22px;
+  }
+  header{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
