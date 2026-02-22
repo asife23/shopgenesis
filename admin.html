@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Admin Panel</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Admin Panel</h1>
+
+        <h1>Admin Dashboard</h1>
+        <button onclick="logout()">Logout</button>
         <a href="index.html">← Go to Shop</a>
 
-        <h2>Add New Product</h2>
+        <hr>
 
+        <h2>Add New Product</h2>
         <form id="add-product-form">
             <input type="text" id="product-title" placeholder="Product Title" required>
             <input type="number" id="product-price" placeholder="Price" required>
@@ -20,16 +23,23 @@
             <button type="submit">Add Product</button>
         </form>
 
-        <h2>Manage Products</h2>
+        <hr>
+
+        <h2>All Products</h2>
         <div id="admin-product-list"></div>
+
+        <hr>
+
+        <h2>All Orders</h2>
+        <div id="admin-order-list"></div>
+
     </div>
 
-    <!-- Firebase v8 CDN -->
+    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
-    <!-- Your JS Files -->
     <script src="firebase.js"></script>
     <script src="script.js"></script>
 
